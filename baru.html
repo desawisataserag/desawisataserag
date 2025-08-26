@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desa Wisata Serag</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Poppins', sans-serif; line-height:1.6; color:#333; background:#fefefe; }
+    header { position:relative; background:url('kereta sawah.jpeg') center/cover no-repeat; color:white; text-align:center; padding:90px 20px; }
+    header::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.45); }
+    header h1, header p { position:relative; z-index:2; }
+    header h1 { font-size:2.5em; margin-bottom:12px; text-shadow:2px 2px 6px rgba(0,0,0,0.7); }
+    header p { font-size:1.2em; font-weight:400; }
+
+    nav { position:sticky; top:0; z-index:10; display:flex; justify-content:center; gap:25px; background:linear-gradient(90deg, #16a085, #27ae60); padding:12px; box-shadow:0 2px 5px rgba(0,0,0,0.2); }
+    nav a { color:white; text-decoration:none; font-weight:600; transition:0.3s; }
+    nav a:hover { color:#f1c40f; }
+
+    section { padding:55px 20px; max-width:1100px; margin:auto; }
+    h2 { color:#27ae60; font-size:1.8em; margin-bottom:18px; border-left:6px solid #f1c40f; padding-left:10px; font-weight:600; }
+
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:25px; }
+    .card { background:white; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform:translateY(-6px); box-shadow:0 8px 18px rgba(0,0,0,0.15); }
+    .card img { width:100%; height:190px; object-fit:cover; }
+    .card h3 { margin:14px; color:#16a085; font-size:1.2em; }
+    .card p { margin:0 14px 16px; color:#555; font-size:0.95em; }
+
+    ul { list-style: none; }
+    ul li { background:#fff; margin:10px 0; padding:14px; border-left:5px solid #16a085; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.08); font-size:0.95em; }
+
+    .map-container { margin-top:25px; border-radius:10px; overflow:hidden; box-shadow:0 3px 10px rgba(0,0,0,0.15); }
+    .map-container iframe { width:100%; height:350px; border:0; }
+    .map-btn { display:inline-block; margin-top:15px; background:#27ae60; color:white; padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:600; transition:0.3s; }
+    .map-btn:hover { background:#1e8449; }
+
+    footer { text-align:center; background:#16a085; color:white; padding:20px; margin-top:45px; font-size:0.9em; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Desa Wisata Serag</h1>
+    <p>Eduwisata & Rekreasi di Bumi Adiluhung</p>
+  </header>
+
+  <nav>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#potensi">Potensi Wisata</a>
+    <a href="#zona">Zona Aktivitas</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="tentang">
+    <h2>Tentang Kami</h2>
+    <p><b>Visi:</b> Terwujudnya Desa Wisata Serag yang mandiri, berbudaya, maju, berkualitas, adil, demokratis, peduli lingkungan, dan mensejahterakan masyarakat.</p>
+    <p><b>Misi:</b> Meningkatkan partisipasi masyarakat, mengembangkan potensi desa, meningkatkan kualitas lingkungan dan SDM, membangun kerjasama strategis.</p>
+  </section>
+
+  <section id="potensi">
+    <h2>Potensi Wisata</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="kereta sawah.jpeg" alt="Kereta Sawah">
+        <h3>Kereta Sawah</h3>
+        <p>Wahana rekreasi dan edukasi pertama di Ponorogo dengan pemandangan Gunung Wilis.</p>
+      </div>
+      <div class="card">
+        <img src="reog.jpg" alt="Budaya Reog">
+        <h3>Budaya & Religi</h3>
+        <p>Seni Reog Ponorogo, sanggar tari, kerajinan tangan, dan wisata religi Makam Mbah Ageng.</p>
+      </div>
+      <div class="card">
+        <img src="spot foto.jpeg" alt="Spot Foto">
+        <h3>Spot Selfie</h3>
+        <p>Pemandangan Gunung Wilis & Lawu, 3 Tugu Pencak Silat, dan panorama alam.</p>
+      </div>
+      <div class="card">
+        <img src="kuliner.jpeg" alt="Kuliner">
+        <h3>Kuliner Desa</h3>
+        <p>Jamu khas, jajanan tradisional, UMKM lokal, dan saung kuliner.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="zona">
+    <h2>Zona & Aktivitas</h2>
+    <ul>
+      <li><b>🚉 Kereta Sawah - Pasar Serag:</b> Perjalanan mengelilingi persawahan,Toko oleh-oleh.</li>
+      <li><b>🌿 Zona Edukasi - Belajar dari Alam:</b> Menanam padi, membajak sawah, menangkap ikan.</li>
+      <li><b>🎭 Zona Budaya - Warisan Leluhur:</b> Tari panen, Reog, wayang, kuliner khas desa.</li>
+      <li><b>📸 Zona Foto - Panen Momen:</b> Spot selfie dengan ornamen bambu, tugu pencak silat, dan panorama sawah.</li>
+    </ul>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <p>📍 Desa Serag, Kecamatan Pulung, Kabupaten Ponorogo</p>
+    <p>📧 Email: desawisatserag@gmail.com</p>
+    <p>📸 Instagram: <a href="https://instagram.com/desawisataserag" target="_blank">@desawisataserag</a></p>
+    <p>🎵 TikTok: <a href="https://tiktok.com/@desawisataserag" target="_blank">@desawisataserag</a></p>
+
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63338.20669497168!2d111.3917353!3d-7.9139489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79bd9175e64f1d%3A0xb02a0bde17f3d50c!2sSerag%2C%20Pulung%2C%20Kabupaten%20Ponorogo%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1700001234567" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <a class="map-btn" href="https://maps.google.com/?q=Desa+Serag,+Pulung,+Ponorogo" target="_blank">📍 Buka di Google Maps</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Desa Wisata Serag - Kereta Sawah | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
